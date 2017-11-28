@@ -1,17 +1,21 @@
 {
   "name": "ember-lazy-mount",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "{{mount}} lazy loading routeless engines",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "engine",
+    "engines",
+    "ember-engines",
+    "mount"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "Jan Buschtöns <jan@buschtoens.me> (https://jan.buschtoens.me)",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "buschtoens/ember-lazy-mount",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
