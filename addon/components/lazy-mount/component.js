@@ -11,7 +11,8 @@ import layout from './template';
 
 @tagName('')
 export default class LazyMountComponent extends Component.extend({ layout }) {
-  @service engineLoader;
+  @service
+  engineLoader;
 
   static positionalParams = ['name'];
 
@@ -23,11 +24,14 @@ export default class LazyMountComponent extends Component.extend({ layout }) {
   @type('any')
   model = null;
 
-  @reads('loadEngine.last.value.name') loadedName;
+  @reads('loadEngine.last.value.name')
+  loadedName;
 
-  @reads('loadEngine.isRunning') isLoading;
+  @reads('loadEngine.isRunning')
+  isLoading;
 
-  @reads('loadEngine.last.error') error;
+  @reads('loadEngine.last.error')
+  error;
 
   didReceiveAttrs() {
     // super.didReceiveAttrs();

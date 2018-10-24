@@ -4,7 +4,8 @@ import { getOwner } from '@ember/application';
 import { service } from 'ember-decorators/service';
 
 export default class EngineLoaderService extends Service {
-  @service assetLoader;
+  @service
+  assetLoader;
 
   /**
    * Checks the owner to see if it has a registration for an Engine. This is a
