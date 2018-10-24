@@ -1,7 +1,7 @@
 import Service from '@ember/service';
 import { get } from '@ember/object';
 import { getOwner } from '@ember/application';
-import { service } from 'ember-decorators/service';
+import { service } from '@ember-decorators/service';
 
 export default class EngineLoaderService extends Service {
   @service
