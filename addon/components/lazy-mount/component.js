@@ -1,16 +1,17 @@
 import Component from '@ember/component';
 import { get } from '@ember/object';
 import { next } from '@ember/runloop';
-import { tagName } from 'ember-decorators/component';
-import { service } from 'ember-decorators/service';
-import { reads } from 'ember-decorators/object/computed';
+import { tagName, layout } from '@ember-decorators/component';
+import { service } from '@ember-decorators/service';
+import { reads } from '@ember-decorators/object/computed';
 import { argument } from '@ember-decorators/argument';
 import { type } from '@ember-decorators/argument/type';
 import { task } from 'ember-concurrency';
-import layout from './template';
+import template from './template';
 
 @tagName('')
-export default class LazyMountComponent extends Component.extend({ layout }) {
+@layout(template)
+export default class LazyMountComponent extends Component {
   @service
   engineLoader;
 
