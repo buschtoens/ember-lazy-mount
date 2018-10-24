@@ -10,14 +10,11 @@ module.exports = {
       legacyDecorators: true
     }
   },
-  plugins: [
-    'ember',
-    'prettier'
-  ],
+  plugins: ['ember', 'prettier'],
   extends: [
     'eslint:recommended',
     'plugin:ember/recommended',
-    'prettier'
+    'plugin:prettier/recommended'
   ],
   env: {
     browser: true
@@ -54,9 +51,13 @@ module.exports = {
         node: true
       },
       plugins: ['node'],
-      rules: Object.assign({}, require('eslint-plugin-node').configs.recommended.rules, {
-        // add your custom rules and overrides for node files here
-      })
+      rules: Object.assign(
+        {},
+        require('eslint-plugin-node').configs.recommended.rules,
+        {
+          // add your custom rules and overrides for node files here
+        }
+      )
     }
   ]
 };
