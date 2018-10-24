@@ -9,6 +9,8 @@
 [![dependencies](https://img.shields.io/david/buschtoens/ember-lazy-mount.svg)](https://david-dm.org/buschtoens/ember-lazy-mount)
 [![devDependencies](https://img.shields.io/david/dev/buschtoens/ember-lazy-mount.svg)](https://david-dm.org/buschtoens/ember-lazy-mount)
 
+`{{mount}}` lazy loading route-less engines.
+
 ## Installation
 
 ```
@@ -18,6 +20,9 @@ ember install ember-lazy-mount
 ## Usage
 
 ### `{{lazy-mount}}` Component
+
+- **`name`**: *`string`* — The name of the engine to load
+- **`model?`**: *`any`* — Optional model that will be passed through to the engine
 
 The `{{lazy-mount}}` component works just like the [`{{mount}}` helper](https://emberjs.com/api/ember/3.5/classes/Ember.Templates.helpers/methods/mount?anchor=mount).
 It accepts the name of the engine as a positional parameter and also an optional
