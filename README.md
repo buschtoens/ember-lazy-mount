@@ -59,7 +59,7 @@ engine.
 {{#lazy-mount engineName model=optionalDataForTheEngine as |engine|}}
   {{#if engine.isLoading}}
     🕑 The engine is loading...
-  {{else if engines.error}}
+  {{else if engine.error}}
     😨 There was an error loading the engine:
     <code>{{engine.error}}</code>
   {{/if}}
