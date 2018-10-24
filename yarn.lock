@@ -676,6 +676,15 @@
     "@ember-decorators/utils" "^3.0.0"
     ember-cli-babel "^6.6.0"
 
+"@ember-decorators/utils@^2.5.1":
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/@ember-decorators/utils/-/utils-2.5.2.tgz#656f30f099de597a8ccdd4cece390728930d37d3"
+  integrity sha512-pCn7epjk4kwJQ+d6m4ekIs9QxJKRShCFA7YDpyteNWW/I49ubIhuV8g95jz5I01/Q1j2KasSnCe7xt3mwHsMlA==
+  dependencies:
+    babel-plugin-debug-macros "^0.1.11"
+    ember-cli-babel "^6.6.0"
+    ember-compatibility-helpers "^1.0.0"
+
 "@ember-decorators/utils@^3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@ember-decorators/utils/-/utils-3.0.0.tgz#f8e82ead2c75a8eaf2cef5b1811ab54fcb28bcee"
@@ -3524,6 +3533,14 @@ ember-compatibility-helpers@^1.0.0, ember-compatibility-helpers@^1.0.2:
     babel-plugin-debug-macros "^0.2.0"
     ember-cli-version-checker "^2.1.1"
     semver "^5.4.1"
+
+ember-concurrency-decorators@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/ember-concurrency-decorators/-/ember-concurrency-decorators-0.1.0.tgz#2d206e85500bd0894ed254d9484c35de8d3cc019"
+  integrity sha512-sPLy9JdlbA8ehzPkYE69ty/Yhq/i9O+e/ImYQDJ36Ub7pch4lsQALkSu4W22ZP6AavGN8gk9g+hhf93KwZMZ9g==
+  dependencies:
+    "@ember-decorators/utils" "^2.5.1"
+    ember-cli-babel "^6.16.0"
 
 ember-concurrency@^0.8.12:
   version "0.8.22"

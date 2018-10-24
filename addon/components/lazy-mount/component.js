@@ -6,7 +6,7 @@ import { service } from '@ember-decorators/service';
 import { reads } from '@ember-decorators/object/computed';
 import { argument } from '@ember-decorators/argument';
 import { type } from '@ember-decorators/argument/type';
-import { task } from 'ember-concurrency';
+import { restartableTask } from 'ember-concurrency-decorators';
 import template from './template';
 
 @tagName('')
@@ -49,11 +49,12 @@ export default class LazyMountComponent extends Component {
     }
   }
 
-  loadEngine = task(function*(name = get(this, 'name')) {
+  @restartableTask
+  loadEngine = function*(name = get(this, 'name')) {
     const engineLoader = get(this, 'engineLoader');
     if (!engineLoader.isLoaded(name)) {
       yield get(this, 'engineLoader').load(name);
     }
     return { name };
-  }).restartable();
+  };
 }
