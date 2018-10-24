@@ -1,9 +1,14 @@
+/* eslint-env node */
+
 module.exports = {
   root: true,
   parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 2017,
-    sourceType: 'module'
+    sourceType: 'module',
+    ecmaFeatures: {
+      legacyDecorators: true
+    }
   },
   plugins: [
     'ember',
@@ -18,8 +23,7 @@ module.exports = {
     browser: true
   },
   rules: {
-    'prettier/prettier': ['error', { singleQuote: true }],
-    'ember/named-functions-in-promises': ['error', { allowSimpleArrowFunction: true }],
+    'ember/named-functions-in-promises': 'off',
     'no-var': 'error',
     'prefer-const': 'error'
   },
