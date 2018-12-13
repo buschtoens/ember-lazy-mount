@@ -21,8 +21,8 @@ ember install ember-lazy-mount
 
 ### `{{lazy-mount}}` Component
 
-- **`name`**: *`string`* — The name of the engine to load
-- **`model?`**: *`any`* — Optional model that will be passed through to the engine
+- **`name`**: _`string`_ — The name of the engine to load
+- **`model?`**: _`any`_ — Optional model that will be passed through to the engine
 
 The `{{lazy-mount}}` component works just like the [`{{mount}}` helper](https://emberjs.com/api/ember/3.5/classes/Ember.Templates.helpers/methods/mount?anchor=mount).
 It accepts the name of the engine as a positional parameter and also an optional
@@ -49,8 +49,8 @@ While the engine is loading or if there was an error loading the engine, the
 block that is passed to the component is rendered. The `engine` block parameter
 is an object with two properties:
 
-- **`isLoading`**: *`boolean`* — Whether or not the engine is currently loading
-- **`error`**: *`Error | null`* — If there was an error loading the engine
+- **`isLoading`**: _`boolean`_ — Whether or not the engine is currently loading
+- **`error`**: _`Error | null`_ — If there was an error loading the engine
 
 When the engine was loaded successfully, the passed in block is replaced by the
 engine.
