@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noEmitOnError": false,
+    "noEmit": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "baseUrl": ".",
+    "module": "es6",
+    "paths": {
+      "dummy/tests/*": ["tests/*"],
+      "dummy/*": ["tests/dummy/app/*", "app/*", "lib/an-engine/app/*"],
+      "ember-lazy-mount": ["addon"],
+      "ember-lazy-mount/*": ["addon/*"],
+      "ember-lazy-mount/test-support": ["addon-test-support"],
+      "ember-lazy-mount/test-support/*": ["addon-test-support/*"],
+      "an-engine": ["lib/an-engine/addon"],
+      "an-engine/*": ["lib/an-engine/addon/*"],
+      "an-engine/test-support": ["lib/an-engine/addon-test-support"],
+      "an-engine/test-support/*": ["lib/an-engine/addon-test-support/*"],
+      "*": ["types/*"]
+    }
+  },
+  "include": [
+    "app/**/*",
+    "addon/**/*",
+    "tests/**/*",
+    "types/**/*",
+    "lib/an-engine/**/*",
+    "test-support/**/*",
+    "addon-test-support/**/*"
+  ]
+}

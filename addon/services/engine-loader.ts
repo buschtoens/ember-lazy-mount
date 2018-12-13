@@ -2,10 +2,11 @@ import Service from '@ember/service';
 import { get } from '@ember/object';
 import { getOwner } from '@ember/application';
 import { service } from '@ember-decorators/service';
+import require from 'require';
+import AssetLoaderService from 'ember-asset-loader/services/asset-loader';
 
 export default class EngineLoaderService extends Service {
-  @service
-  assetLoader;
+  @service assetLoader!: AssetLoaderService;
 
   /**
    * Checks the owner to see if it has a registration for an Engine. This is a
@@ -16,7 +17,7 @@ export default class EngineLoaderService extends Service {
    * @param {String} name
    * @return {Boolean}
    */
-  isLoaded(name) {
+  isLoaded(name: string) {
     const owner = getOwner(this);
     return owner.hasRegistration(`engine:${name}`);
   }
@@ -28,11 +29,11 @@ export default class EngineLoaderService extends Service {
    *
    * @param {String} name
    */
-  register(name) {
+  register(name: string) {
     if (this.isLoaded(name)) return;
 
     const owner = getOwner(this);
-    owner.register(`engine:${name}`, window.require(`${name}/engine`).default);
+    owner.register(`engine:${name}`, require(`${name}/engine`).default);
   }
 
   /**
@@ -41,7 +42,7 @@ export default class EngineLoaderService extends Service {
    * @param {String} name
    * @async
    */
-  async load(name) {
+  async load(name: string) {
     if (this.isLoaded(name)) return;
 
     const assetLoader = get(this, 'assetLoader');
