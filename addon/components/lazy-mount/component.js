@@ -29,22 +29,17 @@ export default class LazyMountComponent extends Component {
   error;
 
   didReceiveAttrs() {
-    // super.didReceiveAttrs();
-    this._super();
+    super.didReceiveAttrs && super.didReceiveAttrs();
 
     const name = get(this, 'name');
     if (name !== get(this, 'loadedName')) {
       // only load a new engine, if it is different from the last one
-      next(() => {
-        // this hack is currently required, because the task is only initialized
-        // after `didReceiveAttrs` was run for the first time
-        get(this, 'loadEngine').perform(name);
-      });
+      get(this, 'loadEngine').perform(name);
     }
   }
 
   @restartableTask
-  loadEngine = function*(name = get(this, 'name')) {
+  *loadEngine(name = get(this, 'name')) {
     const engineLoader = get(this, 'engineLoader');
     if (!engineLoader.isLoaded(name)) {
       yield get(this, 'engineLoader').load(name);
