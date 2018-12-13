@@ -1,6 +1,6 @@
 {
   "name": "ember-lazy-mount",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "{{mount}} lazy loading route-less engines",
   "keywords": [
     "ember-addon",
