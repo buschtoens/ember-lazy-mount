@@ -4,8 +4,6 @@ import { next } from '@ember/runloop';
 import { tagName, layout } from '@ember-decorators/component';
 import { service } from '@ember-decorators/service';
 import { reads } from '@ember-decorators/object/computed';
-import { argument } from '@ember-decorators/argument';
-import { type } from '@ember-decorators/argument/type';
 import { restartableTask } from 'ember-concurrency-decorators';
 import template from './template';
 
@@ -17,12 +15,8 @@ export default class LazyMountComponent extends Component {
 
   static positionalParams = ['name'];
 
-  @argument
-  @type('string')
   name;
 
-  @argument
-  @type('any')
   model = null;
 
   @reads('loadEngine.last.value.name')
