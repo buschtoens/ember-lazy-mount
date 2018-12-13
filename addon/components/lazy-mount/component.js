@@ -1,6 +1,6 @@
 import Component from '@ember/component';
 import { get } from '@ember/object';
-import { next } from '@ember/runloop';
+import { assert } from '@ember/debug';
 import { tagName, layout } from '@ember-decorators/component';
 import { service } from '@ember-decorators/service';
 import { reads } from '@ember-decorators/object/computed';
@@ -25,13 +25,15 @@ export default class LazyMountComponent extends Component {
   @reads('loadEngine.isRunning')
   isLoading;
 
-  @reads('loadEngine.last.error')
+  @reads('loadEngine.last.value.error')
   error;
 
   didReceiveAttrs() {
     super.didReceiveAttrs && super.didReceiveAttrs();
 
     const name = get(this, 'name');
+    assert(`lazy-mount: Argument 'name' is missing.`, name);
+
     if (name !== get(this, 'loadedName')) {
       // only load a new engine, if it is different from the last one
       get(this, 'loadEngine').perform(name);
@@ -42,7 +44,11 @@ export default class LazyMountComponent extends Component {
   *loadEngine(name = get(this, 'name')) {
     const engineLoader = get(this, 'engineLoader');
     if (!engineLoader.isLoaded(name)) {
-      yield get(this, 'engineLoader').load(name);
+      try {
+        yield engineLoader.load(name);
+      } catch (error) {
+        return { error }
+      }
     }
     return { name };
   };

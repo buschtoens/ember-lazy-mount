@@ -1,4 +1,4 @@
-/* eslint-env node */
+const fromPairs = require('lodash.frompairs');
 
 module.exports = {
   root: true,
@@ -35,7 +35,8 @@ module.exports = {
         'testem.js',
         'blueprints/*/index.js',
         'config/**/*.js',
-        'tests/dummy/config/**/*.js'
+        'tests/dummy/config/**/*.js',
+        'lib/*/index.js'
       ],
       excludedFiles: [
         'addon/**',
@@ -55,6 +56,11 @@ module.exports = {
       rules: Object.assign(
         {},
         require('eslint-plugin-node').configs.recommended.rules,
+        fromPairs(
+          Object.keys(
+            require('eslint-plugin-ember').configs.recommended.rules
+          ).map(k => [k, 'off'])
+        ),
         {
           // add your custom rules and overrides for node files here
         }
