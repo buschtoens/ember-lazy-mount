@@ -12,10 +12,10 @@ module('Integration | Component | lazy-mount', function(hooks) {
     assert.expect(2);
 
     render(hbs`
-      <LazyMount @name="an-engine" as |e|>
+      {{#lazy-mount "an-engine" as |e|}}
         isLoading: {{e.isLoading}};
         error: {{e.error}};
-      </LazyMount>
+      {{/lazy-mount}}
     `);
 
     // Using `await render(...)` instead is flaky, because sometimes the request
@@ -36,10 +36,10 @@ module('Integration | Component | lazy-mount', function(hooks) {
 
   test('it shows an error right away for a non-existing engine', async function(assert) {
     await render(hbs`
-      <LazyMount @name="not-an-engine" as |e|>
+      {{#lazy-mount "not-an-engine" as |e|}}
         isLoading: {{e.isLoading}};
         error: {{e.error}};
-      </LazyMount>
+      {{/lazy-mount}}
     `);
 
     assert
@@ -62,10 +62,10 @@ module('Integration | Component | lazy-mount', function(hooks) {
     this.owner.register('service:asset-loader', AssetLoaderService);
 
     render(hbs`
-      <LazyMount @name="an-engine" as |e|>
+      {{#lazy-mount "an-engine" as |e|}}
         isLoading: {{e.isLoading}};
         error: {{e.error}};
-      </LazyMount>
+      {{/lazy-mount}}
     `);
 
     // Using `await render(...)` instead would not work, since the timer in
