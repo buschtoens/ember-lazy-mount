@@ -180,7 +180,10 @@ export default Component.extend({
   _threadId: null,
 
   _thread() {
-    registerWaiter(this, () => !get(this, 'isLoading'));
+    if (Ember.testing) {
+      registerWaiter(this, () => !get(this, 'isLoading'));
+    }
+
     const threadId = set(this, '_threadId', {});
     return () =>
       get(this, 'isDestroyed') ||
