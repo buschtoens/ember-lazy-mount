@@ -2,8 +2,7 @@ const fromPairs = require('lodash.frompairs');
 
 module.exports = {
   root: true,
-  parser: 'eslint-plugin-typescript/parser',
-  plugins: ['typescript', 'ember', 'prettier'],
+  plugins: ['ember', 'prettier'],
   extends: [
     'eslint:recommended',
     'plugin:ember/recommended',
@@ -15,8 +14,7 @@ module.exports = {
   rules: {
     'ember/named-functions-in-promises': 'off',
     'no-var': 'error',
-    'prefer-const': 'error',
-    'typescript/no-unused-vars': 'error'
+    'prefer-const': 'error'
   },
   overrides: [
     // node files
