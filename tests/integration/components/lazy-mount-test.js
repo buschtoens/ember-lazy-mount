@@ -4,7 +4,6 @@ import { render, settled } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import Service from '@ember/service';
 import { schedule } from '@ember/runloop';
-import { timeout } from 'ember-concurrency';
 
 module('Integration | Component | lazy-mount', function(hooks) {
   setupRenderingTest(hooks);
@@ -27,12 +26,7 @@ module('Integration | Component | lazy-mount', function(hooks) {
       assert.dom().hasText('isLoading: true; error: ;', 'shows a loading state')
     );
 
-    // Seems like the task is somehow not correctly awaited for by `settled`.
-    // This rather is a problem upstream in ember-concurrency. Adding a
-    // sufficient timeout is not really clever, but it works reliably in CI.
-    await timeout(500); // ¯\_(ツ)_ /¯
-
-    // Wait for the template to update.
+    // Wait for the engine to be loaded and the template to update.
     await settled();
 
     assert
