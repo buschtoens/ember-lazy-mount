@@ -17,9 +17,6 @@
 ember install ember-lazy-mount
 ```
 
-If you're using a version below Ember 3.6, you also need to install the
-[`ember-native-class-polyfill`](https://github.com/pzuraq/ember-native-class-polyfill).
-
 ## Usage
 
 ### `{{lazy-mount}}` Component
