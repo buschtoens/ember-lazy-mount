@@ -3164,9 +3164,9 @@ ember-disable-prototype-extensions@^1.1.3:
   integrity sha1-GWkTUhdlS14nj5/i2dTkm1cgMp4=
 
 ember-engines@^0.6.1:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/ember-engines/-/ember-engines-0.6.1.tgz#6a344733a4e58bca08633595b9b44b87bd3f918c"
-  integrity sha512-c1SodlTTYlHc/dsUkzr5x2gQCCDKn9J8IVyTFnReSLXtO6Ue9Svv5ViuVxd1hiWH11jEOP1T8Sbz/zoNd/Bd/A==
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/ember-engines/-/ember-engines-0.6.2.tgz#9bf8bbb9bba086aaa81eec0918574469e564f590"
+  integrity sha512-CYbU0m/lpiA6MeVoHPcUE2RqpfDVB1abUOwHqJG91btwm0vDz+vRCNuzHfC6u1MFdA7EUgc+dHjsPCCB72pyrA==
   dependencies:
     amd-name-resolver "1.3.1"
     babel-plugin-compact-reexports "^1.1.0"
