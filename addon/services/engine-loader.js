@@ -1,12 +1,8 @@
 import Service from '@ember/service';
-import { get } from '@ember/object';
 import { getOwner } from '@ember/application';
-import { inject as service } from '@ember/service';
 import require from 'require';
 
 export default Service.extend({
-  assetLoader: service(),
-
   /**
    * Checks the owner to see if it has a registration for an Engine. This is a
    * proxy to tell if an Engine's assets are loaded or not.
@@ -44,7 +40,7 @@ export default Service.extend({
   async load(name) {
     if (this.isLoaded(name)) return;
 
-    const assetLoader = get(this, 'assetLoader');
+    const assetLoader = getOwner(this).lookup('service:asset-loader');
     await assetLoader.loadBundle(name);
     this.register(name);
   }
