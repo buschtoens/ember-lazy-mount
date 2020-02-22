@@ -66,6 +66,8 @@ jobs:
         scenario:
           - ember-lts-3.4
           - ember-lts-3.8
+          - ember-lts-3.12
+          - ember-3.15 # First Octane release
           - ember-release
           - ember-beta
           - ember-canary
