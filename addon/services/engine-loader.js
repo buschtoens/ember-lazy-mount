@@ -1,5 +1,5 @@
-import Service from '@ember/service';
 import { getOwner } from '@ember/application';
+import Service from '@ember/service';
 import require from 'require';
 
 export default Service.extend({
