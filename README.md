@@ -1,6 +1,6 @@
 # ember-lazy-mount
 
-[![Build Status](https://travis-ci.org/buschtoens/ember-lazy-mount.svg)](https://travis-ci.org/buschtoens/ember-lazy-mount)
+[![CI](https://github.com/buschtoens/ember-lazy-mount/workflows/CI/badge.svg)](https://github.com/buschtoens/ember-lazy-mount/actions)
 [![npm version](https://badge.fury.io/js/ember-lazy-mount.svg)](http://badge.fury.io/js/ember-lazy-mount)
 [![Download Total](https://img.shields.io/npm/dt/ember-lazy-mount.svg)](http://badge.fury.io/js/ember-lazy-mount)
 [![Ember Observer Score](https://emberobserver.com/badges/ember-lazy-mount.svg)](https://emberobserver.com/addons/ember-lazy-mount)
