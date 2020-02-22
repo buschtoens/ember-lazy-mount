@@ -43,6 +43,21 @@ the engine, nothing is rendered.
 {{lazy-mount engineName model=optionalDataForTheEngine}}
 ```
 
+You can also pass three optional hooks:
+
+```hbs
+{{lazy-mount
+  this.engineName
+  onLoad=this.onLoad
+  didLoad=this.didLoad
+  onError=this.onError
+}}
+```
+
+- **`onLoad()`** — Called when the engine starts loading
+- **`didLoad()`** — Called when the engine loaded successfully
+- **`onError(error: Error)`** — Called when the engine failed to load
+
 #### Block Usage
 
 While the engine is loading or if there was an error loading the engine, the
@@ -65,3 +80,5 @@ engine.
   {{/if}}
 {{/lazy-mount}}
 ```
+
+You can also pass in the same hooks: `onLoad`, `didLoad`, `onError`
