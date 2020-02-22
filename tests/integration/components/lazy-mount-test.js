@@ -1,10 +1,12 @@
-import { module, test } from 'qunit';
-import { setupRenderingTest } from 'ember-qunit';
 import { render, settled } from '@ember/test-helpers';
+import { setupRenderingTest } from 'ember-qunit';
+import { module, test } from 'qunit';
+
 import { run } from '@ember/runloop';
-import hbs from 'htmlbars-inline-precompile';
-import Service from '@ember/service';
 import { schedule } from '@ember/runloop';
+import Service from '@ember/service';
+
+import hbs from 'htmlbars-inline-precompile';
 
 module('Integration | Component | lazy-mount', function(hooks) {
   setupRenderingTest(hooks);

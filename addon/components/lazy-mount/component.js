@@ -1,9 +1,10 @@
-import Ember from 'ember';
 import Component from '@ember/component';
-import { get, set, setProperties } from '@ember/object';
 import { assert } from '@ember/debug';
+import { get, set, setProperties } from '@ember/object';
 import { inject as service } from '@ember/service';
 import { registerWaiter } from '@ember/test';
+import Ember from 'ember';
+
 import template from './template';
 
 /**
