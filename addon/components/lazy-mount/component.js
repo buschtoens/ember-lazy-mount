@@ -85,6 +85,33 @@ export default Component.extend({
   model: null,
 
   /**
+   * Optional callback called when the engine starts loading.
+   *
+   * @property onLoad
+   * @type {(() => void)?}
+   * @public
+   */
+  onLoad: null,
+
+  /**
+   * Optional callback called when the engine finished loading.
+   *
+   * @property didLoad
+   * @type {(() => void)?}
+   * @public
+   */
+  didLoad: null,
+
+  /**
+   * Optional callback called when the engine filed to load.
+   *
+   * @property onLoad
+   * @type {((error: Error) => void)?}
+   * @public
+   */
+  onError: null,
+
+  /**
    * When the engine was loaded successfully, this will then be the name of the
    * engine. Presence of this field therefore indicates that the engine was
    * loaded successfully.
@@ -163,12 +190,15 @@ export default Component.extend({
   },
 
   setLoading() {
+    this.onLoad && this.onLoad();
     setProperties(this, { loadedName: null, error: null, isLoading: true });
   },
   setLoaded(loadedName) {
+    this.didLoad && this.didLoad();
     setProperties(this, { loadedName, error: null, isLoading: false });
   },
   setError(error) {
+    this.onError && this.onError(error);
     setProperties(this, { loadedName: null, error, isLoading: false });
   },
 
