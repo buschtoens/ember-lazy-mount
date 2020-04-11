@@ -59,7 +59,7 @@
     "loader.js": "^4.7.0",
     "lodash.frompairs": "^4.0.1",
     "prettier": "^1.15.3",
-    "qunit-dom": "^1.1.0"
+    "qunit-dom": "^1.2.0"
   },
   "engines": {
     "node": ">= 10.*"
