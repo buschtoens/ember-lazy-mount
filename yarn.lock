@@ -1154,24 +1154,24 @@
     eslint-plugin-qunit "^4.2.0"
     lodash.merge "^4.6.2"
 
-"@clark/eslint-config-node-order-imports@^1.25.5":
-  version "1.25.5"
-  resolved "https://registry.yarnpkg.com/@clark/eslint-config-node-order-imports/-/eslint-config-node-order-imports-1.25.5.tgz#26d82e195041f0954f92ece94980d0d7c63d34fb"
-  integrity sha512-2flkcPeN2jbv95LykWvhmuuy7Gb5EGRTQIn73cZI28GmEuSlgPU1pT+XixYLnrRpKbCPdN/W6Hb7zyw7i8Dl1g==
+"@clark/eslint-config-node-order-imports@^1.26.5":
+  version "1.26.5"
+  resolved "https://registry.yarnpkg.com/@clark/eslint-config-node-order-imports/-/eslint-config-node-order-imports-1.26.5.tgz#d2e12f7a8dd92532f2c0f85984c52830a1434856"
+  integrity sha512-BvAtq83tPk7QCXXxzz+p3ryel+aDo6yp/gcbVT4xbnPnkkz5inF/BEF/D7my4db+vdGdBrcEW9OlmwBWtlvwgw==
   dependencies:
-    eslint-plugin-import-helpers "^1.0.2"
+    eslint-plugin-import-helpers "^1.1.0"
 
-"@clark/eslint-config-node@^1.25.5":
-  version "1.25.5"
-  resolved "https://registry.yarnpkg.com/@clark/eslint-config-node/-/eslint-config-node-1.25.5.tgz#a40e19e5be3ebd788cc10f1ccc6e55c8f6127103"
-  integrity sha512-Qj4nrdnFFxoLwq2E49ZkykUQlAau50adjouTcU36m1eAcax2wJhCqyenliHkYEgF9YhWzcZAehy7xRgiBHyfMw==
+"@clark/eslint-config-node@^1.26.5":
+  version "1.26.5"
+  resolved "https://registry.yarnpkg.com/@clark/eslint-config-node/-/eslint-config-node-1.26.5.tgz#8fd12638d9d0c556d792b4415802f1dc2200e2eb"
+  integrity sha512-d01ePMyHvSXTrvtGwSEYsajBjg14AIVsjfgevmQIadGR1tupjO6AFCpdWUKOWO02YakvPVdXZqHwWhlj4LjV8g==
   dependencies:
-    "@clark/eslint-config" "^1.25.5"
-    "@clark/eslint-config-node-order-imports" "^1.25.5"
+    "@clark/eslint-config" "^1.26.5"
+    "@clark/eslint-config-node-order-imports" "^1.26.5"
     eslint-plugin-node "^11.1.0"
     lodash.merge "^4.6.2"
 
-"@clark/eslint-config@^1.25.5", "@clark/eslint-config@^1.26.5":
+"@clark/eslint-config@^1.26.5":
   version "1.26.5"
   resolved "https://registry.yarnpkg.com/@clark/eslint-config/-/eslint-config-1.26.5.tgz#bb7122cbb08c72b53407dcf5355061200ee432fb"
   integrity sha512-njqOoUSyvwObqFn0BrA7TLApRaQORo7AmUcv8nrn9El+BNrMR8JDEA1PvVoK+Ch7df8Qv0cHrY83A9ImhyIbbA==
@@ -4886,11 +4886,6 @@ eslint-plugin-es@^3.0.0:
   dependencies:
     eslint-utils "^2.0.0"
     regexpp "^3.0.0"
-
-eslint-plugin-import-helpers@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-import-helpers/-/eslint-plugin-import-helpers-1.0.2.tgz#ae0ab47c991c65e1b25b6370f49afa2cab4cbd9c"
-  integrity sha512-aSoqeEEkJou/1NhbSO7Xr2SKSs8mI53qe8uFh9tMl4WCbrOwoel0eA3hRajlJ7MLCG44umf+mY3/dWuufneFzw==
 
 eslint-plugin-import-helpers@^1.1.0:
   version "1.1.0"
