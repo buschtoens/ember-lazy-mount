@@ -29,7 +29,7 @@
     "ember-cli-htmlbars": "^5.3.1"
   },
   "devDependencies": {
-    "@clark/eslint-config-ember": "^1.27.0",
+    "@clark/eslint-config-ember": "^1.28.0",
     "@clark/eslint-config-node": "^1.27.0",
     "@ember/optional-features": "^1.0.0",
     "an-engine": "link:./lib/an-engine",
