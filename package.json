@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@clark/eslint-config-ember": "^1.28.1",
-    "@clark/eslint-config-node": "^1.28.1",
+    "@clark/eslint-config-node": "^1.28.2",
     "@ember/optional-features": "^1.0.0",
     "an-engine": "link:./lib/an-engine",
     "broccoli-asset-rev": "^3.0.0",
