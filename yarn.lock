@@ -4376,13 +4376,13 @@ ember-cli-version-checker@^4.1.0:
     semver "^6.3.0"
     silent-error "^1.1.1"
 
-ember-cli-version-checker@^5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/ember-cli-version-checker/-/ember-cli-version-checker-5.1.1.tgz#3185c526c14671609cbd22ab0d0925787fc84f3d"
-  integrity sha512-YziSW1MgOuVdJSyUY2CKSC4vXrGQIHF6FgygHkJOxYGjZNQYwf5MK0sbliKatvJf7kzDSnXs+r8JLrD74W/A8A==
+ember-cli-version-checker@^5.1.1, ember-cli-version-checker@^5.1.2:
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/ember-cli-version-checker/-/ember-cli-version-checker-5.1.2.tgz#649c7b6404902e3b3d69c396e054cea964911ab0"
+  integrity sha512-rk7GY+FmLn/2e22HsZs0Ycrz8HQ1W3Fv+2TFOuEFW9optnDXDgkntPBIl6gact/LHsfBM5RKbM3dHsIIeLgl0Q==
   dependencies:
-    resolve-package-path "^2.0.0"
-    semver "^7.3.2"
+    resolve-package-path "^3.1.0"
+    semver "^7.3.4"
     silent-error "^1.1.1"
 
 ember-cli@~3.24.0:
@@ -4496,10 +4496,10 @@ ember-disable-prototype-extensions@^1.1.3:
   resolved "https://registry.yarnpkg.com/ember-disable-prototype-extensions/-/ember-disable-prototype-extensions-1.1.3.tgz#1969135217654b5e278f9fe2d9d4e49b5720329e"
   integrity sha1-GWkTUhdlS14nj5/i2dTkm1cgMp4=
 
-ember-engines@^0.8.11:
-  version "0.8.11"
-  resolved "https://registry.yarnpkg.com/ember-engines/-/ember-engines-0.8.11.tgz#c125e4ffd90da19b14b4399f1dffbe437bae729c"
-  integrity sha512-K/p2yBmxnXlLce3SxTG9JVpweEjTGjs7RC2E/aQ1p09Zxj/HwfOsz40pWUCuS63P8Z9UfW5Zd1dygMTCcOvmlw==
+ember-engines@^0.8.12:
+  version "0.8.12"
+  resolved "https://registry.yarnpkg.com/ember-engines/-/ember-engines-0.8.12.tgz#e48ea38f2aea267552123381341a9233648c8a33"
+  integrity sha512-V/U7MbxnAxLEhMzTI8Jq4lD2QSyZGUgmzD2xOasBUvrf4bjxtNoD/NZy4y09004Gmmc0Dbvna/oq/od4TN//1g==
   dependencies:
     amd-name-resolver "1.3.1"
     babel-plugin-compact-reexports "^1.1.0"
@@ -4517,7 +4517,7 @@ ember-engines@^0.8.11:
     ember-cli-htmlbars "^5.3.1"
     ember-cli-preprocess-registry "^3.3.0"
     ember-cli-string-utils "^1.1.0"
-    ember-cli-version-checker "^3.1.3"
+    ember-cli-version-checker "^5.1.2"
     ember-compatibility-helpers "^1.2.2"
     lodash "^4.17.11"
 
@@ -9211,6 +9211,13 @@ semver@^7.0.0, semver@^7.2.1, semver@^7.3.2:
   version "7.3.2"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.3.2.tgz#604962b052b81ed0786aae84389ffba70ffd3938"
   integrity sha512-OrOb32TeeambH6UrhtShmF7CRDqhL6/5XpPNp2DuRH6+9QLw/orhp72j87v8Qa1ScDkvrrBNpZcDejAirJmfXQ==
+
+semver@^7.3.4:
+  version "7.3.4"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.3.4.tgz#27aaa7d2e4ca76452f98d3add093a72c943edc97"
+  integrity sha512-tCfb2WLjqFAtXn4KEdxIhalnRtoKFN7nAwj0B3ZXCbQloV2tq5eDbcTmT68JJD3nRJq24/XgxtQKFIpQdtvmVw==
+  dependencies:
+    lru-cache "^6.0.0"
 
 send@0.17.1:
   version "0.17.1"
