@@ -58,7 +58,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "loader.js": "^4.7.0",
     "lodash.frompairs": "^4.0.1",
-    "prettier": "^1.15.3",
+    "prettier": "^2.2.1",
     "qunit-dom": "^1.6.0"
   },
   "engines": {
