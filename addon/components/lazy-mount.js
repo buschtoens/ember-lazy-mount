@@ -5,8 +5,6 @@ import { inject as service } from '@ember/service';
 import { registerWaiter } from '@ember/test';
 import Ember from 'ember';
 
-import template from './template';
-
 /**
  * The `{{lazy-mount}}` component works just like the
  * [`{{mount}}` helper](https://emberjs.com/api/ember/3.5/classes/Ember.Templates.helpers/methods/mount?anchor=mount).
@@ -61,7 +59,6 @@ import template from './template';
  */
 export default Component.extend({
   tagName: '',
-  layout: template,
 
   engineLoader: service(),
 
