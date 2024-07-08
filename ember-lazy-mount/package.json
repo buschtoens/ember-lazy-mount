@@ -32,7 +32,7 @@
     "@clark/eslint-config-ember": "^1.28.2",
     "@clark/eslint-config-node": "^2.1.0",
     "@ember/optional-features": "^2.0.0",
-    "an-engine": "link:./lib/an-engine",
+    "an-engine": "0.0.0",
     "broccoli-asset-rev": "^3.0.0",
     "ember-cli": "~3.27.0",
     "ember-cli-dependency-checker": "^3.1.0",
