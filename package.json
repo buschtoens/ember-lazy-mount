@@ -1,9 +1,9 @@
 {
   "private": true,
   "workspaces": [
-    "an-engine",
     "ember-lazy-mount",
-    "test-app"
+    "test-app",
+    "test-engine"
   ],
   "scripts": {
     "build": "yarn workspace ember-lazy-mount run build",
