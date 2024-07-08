@@ -12,6 +12,11 @@
 
 `{{mount}}` lazy loading route-less engines.
 
+## Compatibility
+
+- Ember.js v4.12 or above
+- Ember CLI v4.12 or above
+
 ## Installation
 
 ```
@@ -83,3 +88,11 @@ engine.
 ```
 
 You can also pass in the same hooks: `onLoad`, `didLoad`, `onError`
+
+## Contributing
+
+See the [Contributing](CONTRIBUTING.md) guide for details.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE.md).

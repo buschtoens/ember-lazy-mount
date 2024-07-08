@@ -1,16 +1,14 @@
-import Engine from 'ember-engines/engine';
+import Engine from '@ember/engine';
+
 import loadInitializers from 'ember-load-initializers';
+import Resolver from 'ember-resolver';
 
 import config from './config/environment';
-import Resolver from './resolver';
-
 const { modulePrefix } = config;
 
-const Eng = Engine.extend({
-  modulePrefix,
-  Resolver
-});
+export default class TestEngine extends Engine {
+  modulePrefix = modulePrefix;
+  Resolver = Resolver;
+}
 
-loadInitializers(Eng, modulePrefix);
-
-export default Eng;
+loadInitializers(TestEngine, modulePrefix);

@@ -20,7 +20,7 @@
     "registry": "https://registry.npmjs.org"
   },
   "volta": {
-    "node": "14.21.3"
+    "node": "18.20.4"
   },
   "dependencies": {}
 }
