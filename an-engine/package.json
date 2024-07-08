@@ -1,12 +1,13 @@
 {
   "name": "an-engine",
+  "private": true,
   "version": "0.0.0",
   "keywords": [
     "ember-addon",
     "ember-engine"
   ],
   "dependencies": {
-    "ember-cli-htmlbars": "*",
-    "ember-cli-babel": "*"
+    "ember-cli-htmlbars": "^5.7.2",
+    "ember-cli-babel": "^7.26.11"
   }
 }
