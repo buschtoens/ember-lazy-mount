@@ -37,10 +37,13 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Lint JS
         run: yarn lint:js
+        working-directory: ember-lazy-mount
       - name: Lint Handlebars
         run: yarn lint:hbs
+        working-directory: ember-lazy-mount
       - name: Browser Tests
         run: yarn test
+        working-directory: ember-lazy-mount
 
   test-old-dependencies:
     name: Oldest Supported Env
@@ -56,6 +59,7 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Browser Tests
         run: yarn test
+        working-directory: ember-lazy-mount
 
   test-try:
     name: Ember Try
@@ -82,3 +86,4 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Try Scenario
         run: yarn ember try:one ${{ matrix.scenario }}
+        working-directory: ember-lazy-mount

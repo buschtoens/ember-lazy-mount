@@ -1,0 +1,70 @@
+{
+  "name": "ember-lazy-mount",
+  "version": "0.8.0",
+  "description": "{{mount}} lazy loading route-less engines",
+  "keywords": [
+    "ember-addon",
+    "engine",
+    "engines",
+    "ember-engines",
+    "mount"
+  ],
+  "repository": "buschtoens/ember-lazy-mount",
+  "license": "MIT",
+  "author": "Jan Buschtöns <jan@buschtoens.me> (https://jan.buschtoens.me)",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "ember build",
+    "lint:hbs": "ember-template-lint .",
+    "lint:js": "eslint .",
+    "start": "ember serve",
+    "test": "ember test",
+    "test:all": "ember try:each"
+  },
+  "dependencies": {
+    "ember-cli-babel": "^7.26.6",
+    "ember-cli-htmlbars": "^5.7.1"
+  },
+  "devDependencies": {
+    "@clark/eslint-config-ember": "^1.28.2",
+    "@clark/eslint-config-node": "^2.1.0",
+    "@ember/optional-features": "^2.0.0",
+    "an-engine": "link:./lib/an-engine",
+    "broccoli-asset-rev": "^3.0.0",
+    "ember-cli": "~3.27.0",
+    "ember-cli-dependency-checker": "^3.1.0",
+    "ember-cli-htmlbars-inline-precompile": "^3.0.2",
+    "ember-cli-inject-live-reload": "^2.1.0",
+    "ember-cli-sri": "^2.1.1",
+    "ember-cli-uglify": "^3.0.0",
+    "ember-disable-prototype-extensions": "^1.1.3",
+    "ember-engines": "^0.8.16",
+    "ember-export-application-global": "^2.0.0",
+    "ember-load-initializers": "^2.1.2",
+    "ember-maybe-import-regenerator": "^0.1.6",
+    "ember-qunit": "^4.1.2",
+    "ember-resolver": "^8.0.2",
+    "ember-source": "~3.27.5",
+    "ember-source-channel-url": "^3.0.0",
+    "ember-template-lint": "^2.21.0",
+    "ember-try": "^1.0.0",
+    "eslint": "^7.31.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-ember": "^7.10.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "loader.js": "^4.7.0",
+    "lodash.frompairs": "^4.0.1",
+    "prettier": "^1.15.3",
+    "qunit-dom": "^1.6.0"
+  },
+  "engines": {
+    "node": ">= 10.*"
+  },
+  "ember-addon": {
+    "configPath": "tests/dummy/config"
+  }
+}
