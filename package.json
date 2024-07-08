@@ -1,7 +1,8 @@
 {
   "private": true,
   "workspaces": [
-    "ember-lazy-mount"
+    "ember-lazy-mount",
+    "test-app"
   ],
   "scripts": {
     "build": "yarn workspace ember-lazy-mount run build",
@@ -19,5 +20,6 @@
   },
   "volta": {
     "node": "14.21.3"
-  }
+  },
+  "dependencies": {}
 }
