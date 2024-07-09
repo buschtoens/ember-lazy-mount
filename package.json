@@ -6,21 +6,25 @@
     "test-engine"
   ],
   "scripts": {
-    "build": "yarn workspace ember-lazy-mount run build",
-    "lint": "yarn workspaces run lint",
-    "lint:fix": "yarn workspaces run lint:fix",
-    "prepare": "yarn build",
-    "start": "concurrently 'yarn:start:*' --restart-after 5000 --prefix-colors cyan,white,yellow",
-    "start:addon": "yarn workspace ember-lazy-mount run start",
-    "start:test-app": "yarn workspace test-app run start",
-    "test": "yarn workspaces run test",
-    "test:ember": "yarn workspace test-app run test:ember"
+    "build": "concurrently 'pnpm:build:*'",
+    "build:js": "rollup --config",
+    "build:types": "glint --declaration",
+    "lint": "concurrently 'pnpm:lint:*(!fix)' --names 'lint:'",
+    "lint:fix": "concurrently 'pnpm:lint:*:fix' --names 'fix:'",
+    "lint:js": "eslint . --cache",
+    "lint:js:fix": "eslint . --fix",
+    "lint:types": "glint",
+    "prepack": "concurrently 'pnpm:build:*'",
+    "start": "concurrently 'pnpm:start:*'",
+    "start:js": "rollup --config --watch --no-watch.clearScreen",
+    "start:types": "glint --declaration --watch",
+    "test": "echo 'A v2 addon does not have tests, run tests in test-app'"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
+  "packageManager": "pnpm@8.15.8",
   "volta": {
     "node": "18.20.4"
-  },
-  "dependencies": {}
+  }
 }

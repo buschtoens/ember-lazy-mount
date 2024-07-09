@@ -2,25 +2,29 @@
 
 ## Installation
 
-- `git clone <repository-url>`
-- `cd my-addon`
-- `npm install`
+- `git clone git@github.com:buschtoens/ember-lazy-mount.git`
+- `cd ember-lazy-mount`
+- `pnpm install`
 
 ## Linting
 
-- `npm run lint:hbs`
-* `npm run lint:js`
-- `npm run lint:js -- --fix`
+Inside any of the packages you can run:
+
+- `pnpm lint`
+- `pnpm lint:fix`
 
 ## Running tests
 
-- `npm run test` – Runs the test suite on the current Ember version
-- `npm run test:ember -- --server` – Runs the test suite in "watch mode"
-- `npm run test:ember-compatibility` – Runs the test suite against multiple Ember versions
+- `cd ember-lazy-mount && pnpm start` – Builds the addon in "watch mode" so changes picked up by test app.
+- `cd test-app && ember test` – Runs the test suite on the current Ember version
+- `cd test-app && ember test --server` – Runs the test suite in "watch mode"
+- `cd test-app && ember try:each` – Runs the test suite against multiple Ember versions
 
-## Running the dummy application
+During development, if you'd like test app to pick up changes in the addon, make sure to run both
+`cd ember-lazy-mount && pnpm start` and `cd test-app && ember test --server` in different terminals.
 
-- `npm run start`
-- Visit the dummy application at [http://localhost:4200](http://localhost:4200).
+## Running the test application
 
-For more information on using ember-cli, visit [https://cli.emberjs.com/release/](https://cli.emberjs.com/release/).
+- `cd test-app && ember serve`
+- Visit the test application at [http://localhost:4200](http://localhost:4200).
+  For more information on using ember-cli, visit [https://cli.emberjs.com/release/](https://cli.emberjs.com/release/).
