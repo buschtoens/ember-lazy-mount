@@ -1,9 +1,8 @@
 'use strict';
 
-// eslint-disable-next-line node/no-extraneous-require
-const EngineAddon = require('ember-engines/lib/engine-addon');
+const { buildEngine } = require('ember-engines/lib/engine-addon');
 
-module.exports = EngineAddon.extend({
+module.exports = buildEngine({
   name: 'test-engine',
 
   lazyLoading: {
