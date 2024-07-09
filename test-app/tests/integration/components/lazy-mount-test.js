@@ -1,3 +1,4 @@
+/* eslint-disable ember/no-runloop */
 import { render, settled } from '@ember/test-helpers';
 import { setupRenderingTest } from 'ember-qunit';
 import { module, test } from 'qunit';
@@ -8,10 +9,10 @@ import Service from '@ember/service';
 
 import hbs from 'htmlbars-inline-precompile';
 
-module('Integration | Component | lazy-mount', function(hooks) {
+module('Integration | Component | lazy-mount', function (hooks) {
   setupRenderingTest(hooks);
 
-  hooks.beforeEach(function(assert) {
+  hooks.beforeEach(function (assert) {
     this.onError = () => assert.step('onError');
     this.onLoad = () => assert.step('onLoad');
     this.didLoad = () => assert.step('didLoad');
@@ -30,7 +31,7 @@ module('Integration | Component | lazy-mount', function(hooks) {
     {{/lazy-mount}}
   `;
 
-  test('it works', async function(assert) {
+  test('it works', async function (assert) {
     assert.expect(7);
 
     this.engineName = 'test-engine';
@@ -59,7 +60,7 @@ module('Integration | Component | lazy-mount', function(hooks) {
     assert.verifySteps([]);
   });
 
-  test('it throws an error right away for a non-existing engine', async function(assert) {
+  test('it throws an error right away for a non-existing engine', async function (assert) {
     this.engineName = 'not-an-engine';
 
     run(() => render(TEMPLATE));
@@ -68,18 +69,18 @@ module('Integration | Component | lazy-mount', function(hooks) {
       assert
         .dom()
         .hasText(
-          'isLoading: false; error: Error: Assertion Failed: No bundle with name "not-an-engine" exists in the asset manifest.;'
+          'isLoading: false; error: Error: Assertion Failed: No bundle with name "not-an-engine" exists in the asset manifest.;',
         );
       assert.verifySteps(['onLoad', 'onError']);
     });
   });
 
-  test('it shows a loading state and an error', async function(assert) {
+  test('it shows a loading state and an error', async function (assert) {
     assert.expect(6);
 
     class AssetLoaderService extends Service {
       async loadBundle() {
-        await new Promise(resolve => schedule('afterRender', resolve));
+        await new Promise((resolve) => schedule('afterRender', resolve));
         throw new Error('something failed');
       }
     }
@@ -110,7 +111,7 @@ module('Integration | Component | lazy-mount', function(hooks) {
       .dom()
       .hasText(
         'isLoading: false; error: Error: something failed;',
-        'shows an error'
+        'shows an error',
       );
   });
 });
