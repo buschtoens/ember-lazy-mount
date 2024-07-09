@@ -6,10 +6,10 @@ module.exports = buildEngine({
   name: 'test-engine',
 
   lazyLoading: {
-    enabled: true
+    enabled: true,
   },
 
   isDevelopingAddon() {
     return true;
-  }
+  },
 });

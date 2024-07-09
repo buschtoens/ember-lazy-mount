@@ -6,13 +6,14 @@ settings:
 
 importers:
 
-  .: {}
+  .:
+    devDependencies:
+      concurrently:
+        specifier: ^8.2.2
+        version: 8.2.2
 
   ember-lazy-mount:
     dependencies:
-      '@babel/core':
-        specifier: ^7.24.7
-        version: 7.24.7
       ember-cli-babel:
         specifier: ^8.2.0
         version: 8.2.0(@babel/core@7.24.7)
@@ -20,6 +21,9 @@ importers:
         specifier: ^6.3.0
         version: 6.3.0
     devDependencies:
+      '@babel/core':
+        specifier: ^7.24.7
+        version: 7.24.7
       '@babel/eslint-parser':
         specifier: ^7.24.7
         version: 7.24.7(@babel/core@7.24.7)(eslint@8.57.0)
@@ -125,6 +129,9 @@ importers:
       '@ember/test-helpers':
         specifier: ^3.3.0
         version: 3.3.0(ember-source@5.10.0)(webpack@5.92.1)
+      '@embroider/test-setup':
+        specifier: ^4.0.0
+        version: 4.0.0
       '@glimmer/component':
         specifier: ^1.1.2
         version: 1.1.2(@babel/core@7.24.7)
@@ -194,9 +201,15 @@ importers:
       ember-source:
         specifier: ~5.10.0
         version: 5.10.0(@glimmer/component@1.1.2)(rsvp@4.8.5)(webpack@5.92.1)
+      ember-source-channel-url:
+        specifier: ^3.0.0
+        version: 3.0.0
       ember-template-lint:
         specifier: ^6.0.0
         version: 6.0.0
+      ember-try:
+        specifier: ^3.0.0
+        version: 3.0.0
       ember-welcome-page:
         specifier: ^7.0.2
         version: 7.0.2
@@ -369,15 +382,6 @@ importers:
       rsvp:
         specifier: ^4.8.5
         version: 4.8.5
-      stylelint:
-        specifier: ^15.11.0
-        version: 15.11.0
-      stylelint-config-standard:
-        specifier: ^34.0.0
-        version: 34.0.0(stylelint@15.11.0)
-      stylelint-prettier:
-        specifier: ^4.1.0
-        version: 4.1.0(prettier@3.3.2)(stylelint@15.11.0)
       webpack:
         specifier: ^5.92.1
         version: 5.92.1
