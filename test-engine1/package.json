@@ -1,8 +1,11 @@
 {
-  "name": "test-app",
+  "name": "test-engine1",
   "version": "0.0.0",
-  "private": true,
-  "description": "Small description for test-app goes here",
+  "description": "The default blueprint for ember-cli addons.",
+  "keywords": [
+    "ember-addon",
+    "ember-engine"
+  ],
   "repository": "",
   "license": "MIT",
   "author": "",
@@ -13,22 +16,22 @@
   "scripts": {
     "build": "ember build --environment=production",
     "lint": "concurrently \"pnpm:lint:*(!fix)\" --names \"lint:\"",
-    "lint:css": "stylelint \"**/*.css\"",
-    "lint:css:fix": "concurrently \"pnpm:lint:css -- --fix\"",
     "lint:fix": "concurrently \"pnpm:lint:*:fix\" --names \"fix:\"",
     "lint:hbs": "ember-template-lint .",
     "lint:hbs:fix": "ember-template-lint . --fix",
     "lint:js": "eslint . --cache",
     "lint:js:fix": "eslint . --fix",
-    "start": "ember serve",
-    "test": "ember test"
+    "start": "ember serve"
+  },
+  "dependencies": {
+    "@babel/core": "^7.24.7",
+    "ember-cli-babel": "^8.2.0",
+    "ember-cli-htmlbars": "^6.3.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.7",
     "@babel/eslint-parser": "^7.24.7",
     "@babel/plugin-proposal-decorators": "^7.24.7",
     "@ember/optional-features": "^2.1.0",
-    "@ember/string": "^3.1.1",
     "@ember/test-helpers": "^3.3.0",
     "@embroider/test-setup": "^4.0.0",
     "@glimmer/component": "^1.1.2",
@@ -37,19 +40,13 @@
     "concurrently": "^8.2.2",
     "ember-auto-import": "^2.7.4",
     "ember-cli": "~5.10.0",
-    "ember-cli-app-version": "^6.0.1",
-    "ember-cli-babel": "^8.2.0",
     "ember-cli-clean-css": "^3.0.0",
     "ember-cli-dependency-checker": "^3.3.2",
-    "ember-cli-htmlbars": "^6.3.0",
     "ember-cli-inject-live-reload": "^2.1.0",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-terser": "^4.0.2",
     "ember-engines": "^0.11.0",
-    "ember-fetch": "^8.1.2",
-    "ember-lazy-mount": "workspace:*",
     "ember-load-initializers": "^2.1.2",
-    "ember-modifier": "^4.2.0",
     "ember-page-title": "^8.2.3",
     "ember-qunit": "^8.1.0",
     "ember-resolver": "^12.0.1",
@@ -57,7 +54,6 @@
     "ember-source-channel-url": "^3.0.0",
     "ember-template-lint": "^6.0.0",
     "ember-try": "^3.0.0",
-    "ember-welcome-page": "^7.0.2",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-ember": "^12.1.1",
@@ -69,21 +65,19 @@
     "qunit": "^2.21.0",
     "qunit-dom": "^3.2.0",
     "rsvp": "^4.8.5",
-    "stylelint": "^15.11.0",
-    "stylelint-config-standard": "^34.0.0",
-    "stylelint-prettier": "^4.1.0",
-    "test-engine1": "workspace:*",
-    "test-engine2": "workspace:*",
-    "tracked-built-ins": "^3.3.0",
     "webpack": "^5.92.1"
   },
+  "peerDependencies": {
+    "ember-source": ">= 4.0.0",
+    "ember-engines": "^0.11.0"
+  },
   "engines": {
-    "node": ">= 10"
+    "node": ">= 18"
   },
   "ember": {
     "edition": "octane"
   },
-  "volta": {
-    "extends": "../package.json"
+  "ember-addon": {
+    "configPath": "tests/dummy/config"
   }
 }

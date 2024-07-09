@@ -1,9 +1,10 @@
 {
-  "name": "test-engine",
+  "name": "test-engine2",
   "version": "0.0.0",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ember-engine"
   ],
   "repository": "",
   "license": "MIT",

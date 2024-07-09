@@ -2,7 +2,7 @@
 
 module.exports = function (environment) {
   const ENV = {
-    modulePrefix: 'test-engine',
+    modulePrefix: 'test-engine2',
     environment,
   };
 
