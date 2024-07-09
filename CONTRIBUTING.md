@@ -8,8 +8,6 @@
 
 ## Linting
 
-Inside any of the packages you can run:
-
 - `pnpm lint`
 - `pnpm lint:fix`
 

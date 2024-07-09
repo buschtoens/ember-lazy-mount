@@ -1,6 +1,5 @@
 import { getOwner } from '@ember/owner';
 import Service from '@ember/service';
-import require from 'require';
 
 export default class EngineLoaderService extends Service {
   /**
@@ -28,7 +27,10 @@ export default class EngineLoaderService extends Service {
     if (this.isLoaded(name)) return;
 
     const owner = getOwner(this);
-    owner.register(`engine:${name}`, require(`${name}/engine`).default);
+    owner.register(
+      `engine:${name}`,
+      globalThis.require(`${name}/engine`).default,
+    );
   }
 
   /**

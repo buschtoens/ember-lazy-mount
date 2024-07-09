@@ -15,7 +15,7 @@
 ## Compatibility
 
 - Ember.js v4.12 or above
-- Ember CLI v4.12 or above
+- Embroider or ember-auto-import v2
 
 ## Installation
 
