@@ -4,11 +4,10 @@
 [![npm version](https://badge.fury.io/js/ember-lazy-mount.svg)](http://badge.fury.io/js/ember-lazy-mount)
 [![Download Total](https://img.shields.io/npm/dt/ember-lazy-mount.svg)](http://badge.fury.io/js/ember-lazy-mount)
 [![Ember Observer Score](https://emberobserver.com/badges/ember-lazy-mount.svg)](https://emberobserver.com/addons/ember-lazy-mount)
-[![Ember Versions](https://img.shields.io/badge/Ember.js%20Versions-%5E3.4-brightgreen.svg)](https://travis-ci.org/buschtoens/ember-lazy-mount)
+[![Ember Versions](https://img.shields.io/badge/Ember.js%20Versions-%5E4.12-brightgreen.svg)](https://github.com/buschtoens/ember-lazy-mount/actions)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)  
 [![Dependabot enabled](https://img.shields.io/badge/dependabot-enabled-blue.svg?logo=dependabot)](https://dependabot.com/)
-[![dependencies](https://img.shields.io/david/buschtoens/ember-lazy-mount.svg)](https://david-dm.org/buschtoens/ember-lazy-mount)
-[![devDependencies](https://img.shields.io/david/dev/buschtoens/ember-lazy-mount.svg)](https://david-dm.org/buschtoens/ember-lazy-mount)
+[![Dependencies](https://img.shields.io/librariesio/github/buschtoens/ember-lazy-mount)](https://libraries.io/github/buschtoens/ember-lazy-mount)
 
 `{{mount}}` lazy loading route-less engines.
 
