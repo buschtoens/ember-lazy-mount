@@ -1,8 +1,8 @@
-import { getOwner } from '@ember/application';
+import { getOwner } from '@ember/owner';
 import Service from '@ember/service';
 import require from 'require';
 
-export default Service.extend({
+export default class EngineLoaderService extends Service {
   /**
    * Checks the owner to see if it has a registration for an Engine. This is a
    * proxy to tell if an Engine's assets are loaded or not.
@@ -15,7 +15,7 @@ export default Service.extend({
   isLoaded(name) {
     const owner = getOwner(this);
     return owner.hasRegistration(`engine:${name}`);
-  },
+  }
 
   /**
    * Registers an Engine that was recently loaded.
@@ -29,7 +29,7 @@ export default Service.extend({
 
     const owner = getOwner(this);
     owner.register(`engine:${name}`, require(`${name}/engine`).default);
-  },
+  }
 
   /**
    * Loads and registers a lazy Engine.
@@ -44,4 +44,4 @@ export default Service.extend({
     await assetLoader.loadBundle(name);
     this.register(name);
   }
-});
+}
