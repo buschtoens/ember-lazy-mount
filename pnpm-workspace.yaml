@@ -1,0 +1,4 @@
+packages:
+  - 'ember-lazy-mount'
+  - 'test-app'
+  - 'test-engine'
