@@ -4,11 +4,13 @@
 # This workflow brings back that capability by placing the compiled assets on a "dist" branch
 # (configurable via the "branch" option below)
 name: Push dist
+
 on:
   push:
     branches:
       - main
       - master
+
 jobs:
   push-dist:
     name: Push dist

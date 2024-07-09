@@ -11,8 +11,6 @@ export default {
   // You can augment this if you need to.
   output: addon.output(),
 
-  external: ['require'],
-
   plugins: [
     // These are the modules that users should be able to import from your
     // addon. Anything not listed here may get optimized away.
@@ -21,7 +19,7 @@ export default {
     // up your addon's public API. Also make sure your package.json#exports
     // is aligned to the config here.
     // See https://github.com/embroider-build/embroider/blob/main/docs/v2-faq.md#how-can-i-define-the-public-exports-of-my-addon
-    addon.publicEntrypoints(['**/*.js', 'index.js']),
+    addon.publicEntrypoints(['**/*.js', 'index.js', 'template-registry.js']),
 
     // These are the modules that should get reexported into the traditional
     // "app" tree. Things in here should also be in publicEntrypoints above, but
@@ -45,7 +43,7 @@ export default {
     // By default, this will load the actual babel config from the file
     // babel.config.json.
     babel({
-      extensions: ['.js', '.gjs'],
+      extensions: ['.js', '.gjs', '.ts', '.gts'],
       babelHelpers: 'bundled',
     }),
 
