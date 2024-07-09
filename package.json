@@ -1,5 +1,9 @@
 {
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:buschtoens/ember-lazy-mount.git"
+  },
   "scripts": {
     "build": "pnpm --filter ember-lazy-mount build",
     "lint": "pnpm --filter '*' lint",
@@ -7,12 +11,41 @@
     "prepare": "pnpm build",
     "test": "pnpm --filter '*' test"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@release-it-plugins/lerna-changelog": "^7.0.0",
+    "@release-it-plugins/workspaces": "^4.2.0",
+    "release-it": "^17.4.1"
+  },
   "packageManager": "pnpm@8.15.8",
   "volta": {
     "node": "18.20.4"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
+  },
+  "release-it": {
+    "hooks": {
+      "after:bump": "pnpm install",
+      "before:init": "cp README.md LICENSE.md ember-lazy-mount/"
+    },
+    "plugins": {
+      "@release-it-plugins/lerna-changelog": {
+        "infile": "CHANGELOG.md",
+        "launchEditor": false
+      },
+      "@release-it-plugins/workspaces": {
+        "workspaces": [
+          "ember-lazy-mount"
+        ]
+      }
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true,
+      "tokenRef": "GITHUB_AUTH"
+    },
+    "npm": false
   }
 }
