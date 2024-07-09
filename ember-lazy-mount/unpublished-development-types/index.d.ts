@@ -15,3 +15,17 @@ declare module '@glint/environment-ember-loose/registry' {
     // See https://typed-ember.gitbook.io/glint/using-glint/ember/using-addons
   }
 }
+
+class AssetLoaderService {
+  loadBundle(name: string): Promise<void>;
+}
+
+declare module '@ember/service' {
+  interface Registry {
+    'asset-loader': AssetLoaderService;
+  }
+}
+
+declare interface globalThis {
+  require(string): unknown;
+}

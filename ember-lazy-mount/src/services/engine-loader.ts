@@ -1,5 +1,11 @@
-import { getOwner } from '@ember/owner';
 import Service from '@ember/service';
+import { getOwner } from '@ember/owner';
+
+import type Owner from '@ember/owner';
+
+type ExtendedOwner = Owner & {
+  hasRegistration(name: string): boolean;
+};
 
 export default class EngineLoaderService extends Service {
   /**
@@ -11,9 +17,9 @@ export default class EngineLoaderService extends Service {
    * @param {String} name
    * @return {Boolean}
    */
-  isLoaded(name) {
-    const owner = getOwner(this);
-    return owner.hasRegistration(`engine:${name}`);
+  isLoaded(name: string) {
+    const owner = <ExtendedOwner>getOwner(this);
+    return Boolean(owner?.hasRegistration(`engine:${name}`));
   }
 
   /**
@@ -23,12 +29,14 @@ export default class EngineLoaderService extends Service {
    *
    * @param {String} name
    */
-  register(name) {
+  register(name: string) {
     if (this.isLoaded(name)) return;
 
     const owner = getOwner(this);
-    owner.register(
+    owner?.register(
       `engine:${name}`,
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       globalThis.require(`${name}/engine`).default,
     );
   }
@@ -39,11 +47,11 @@ export default class EngineLoaderService extends Service {
    * @param {String} name
    * @async
    */
-  async load(name) {
+  async load(name: string) {
     if (this.isLoaded(name)) return;
 
-    const assetLoader = getOwner(this).lookup('service:asset-loader');
-    await assetLoader.loadBundle(name);
+    const assetLoader = getOwner(this)?.lookup('service:asset-loader');
+    await assetLoader?.loadBundle(name);
     this.register(name);
   }
 }

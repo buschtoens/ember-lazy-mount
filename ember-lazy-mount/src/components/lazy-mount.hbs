@@ -3,6 +3,6 @@
   {{yield (hash isLoading=true error=null)}}
 {{else if this.error}}
   {{yield (hash isLoading=false error=this.error)}}
-{{else}}
+{{else if this.loadedName}}
   {{mount this.loadedName model=@model}}
 {{/if}}
