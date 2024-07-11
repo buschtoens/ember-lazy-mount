@@ -34,8 +34,8 @@ importers:
         specifier: ^7.24.7
         version: 7.24.7
       '@babel/eslint-parser':
-        specifier: ^7.24.7
-        version: 7.24.7(@babel/core@7.24.7)(eslint@8.57.0)
+        specifier: ^7.24.8
+        version: 7.24.8(@babel/core@7.24.7)(eslint@8.57.0)
       '@babel/plugin-transform-typescript':
         specifier: ^7.24.4
         version: 7.24.7(@babel/core@7.24.7)
@@ -302,8 +302,8 @@ importers:
         version: 6.3.0
     devDependencies:
       '@babel/eslint-parser':
-        specifier: ^7.24.7
-        version: 7.24.7(@babel/core@7.24.7)(eslint@8.57.0)
+        specifier: ^7.24.8
+        version: 7.24.8(@babel/core@7.24.7)(eslint@8.57.0)
       '@babel/plugin-proposal-decorators':
         specifier: ^7.24.7
         version: 7.24.7(@babel/core@7.24.7)
@@ -426,8 +426,8 @@ importers:
         version: 6.3.0
     devDependencies:
       '@babel/eslint-parser':
-        specifier: ^7.24.7
-        version: 7.24.7(@babel/core@7.24.7)(eslint@8.57.0)
+        specifier: ^7.24.8
+        version: 7.24.8(@babel/core@7.24.7)(eslint@8.57.0)
       '@babel/plugin-proposal-decorators':
         specifier: ^7.24.7
         version: 7.24.7(@babel/core@7.24.7)
@@ -593,8 +593,8 @@ packages:
       semver: 6.3.1
     dev: true
 
-  /@babel/eslint-parser@7.24.7(@babel/core@7.24.7)(eslint@8.57.0):
-    resolution: {integrity: sha512-SO5E3bVxDuxyNxM5agFv480YA2HO6ohZbGxbazZdIk3KQOPOGVNw6q78I9/lbviIf95eq6tPozeYnJLbjnC8IA==}
+  /@babel/eslint-parser@7.24.8(@babel/core@7.24.7)(eslint@8.57.0):
+    resolution: {integrity: sha512-nYAikI4XTGokU2QX7Jx+v4rxZKhKivaQaREZjuW3mrJrbdWJ5yUfohnoUULge+zEEaKjPYNxhoRgUKktjXtbwA==}
     engines: {node: ^10.13.0 || ^12.13.0 || >=14.0.0}
     peerDependencies:
       '@babel/core': ^7.11.0
