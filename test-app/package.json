@@ -80,7 +80,7 @@
     "test-engine2": "workspace:*",
     "tracked-built-ins": "^3.3.0",
     "typescript": "^5.5.3",
-    "webpack": "^5.92.1"
+    "webpack": "^5.93.0"
   },
   "engines": {
     "node": ">= 18"
